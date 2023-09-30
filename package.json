@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "start": "node src/app.ts",
+    "start": "node dist/app.js",
     "dev": "nodemon --exec \"tsx src/app.ts\" --ext ts,js,json --ignore 'src/*.ejs' & npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --watch",
     "build": "tsc -p . && npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --minify && cp -r src/public dist &&  cp -r src/views dist && rm dist/public/css/tailwind.css"
   },
