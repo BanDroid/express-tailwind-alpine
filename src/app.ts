@@ -39,7 +39,7 @@ async function start() {
 	app.use(
 		BASE_ROUTE,
 		(req, res, next) => {
-			res.locals.BASE_ROUTE = BASE_ROUTE;
+			res.locals.BASE_ROUTE = BASE_ROUTE === "/" ? "" : BASE_ROUTE;
 			next();
 		},
 		RoutesHanlder
