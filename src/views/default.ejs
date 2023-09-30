@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./components/default_head") %>
+
+<body>
+	<!-- make sure alpinejs load first before rendering any dom -->
+	<template x-data x-if="true">
+		<div id="root">
+			<%- locals.page ? include("pages/" + locals.page) : "Hello World" %>
+		</div>
+	</template>
+</body>
+
+</html>

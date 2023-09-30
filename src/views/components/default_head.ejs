@@ -1,0 +1,12 @@
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= locals.title || "Hello World" %></title>
+
+	<!-- alpinejs -->
+	<script src="//unpkg.com/alpinejs" defer></script>
+
+	<!-- your css and js, note that locals.BASE_ROUTE is need if your app running on specific path of your virtual host -->
+	<link rel="stylesheet" href=<%= locals.BASE_ROUTE + "/css/index.css" %>>
+</head>
