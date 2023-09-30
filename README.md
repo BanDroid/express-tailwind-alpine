@@ -1,4 +1,4 @@
-# express-typescript-with-tailwind
+# express-tailwind-alpine
 
 template project for express application using ejs as view engine and apply tailwindcss for css libraries, also using alpinejs for dom manipulation.
 
