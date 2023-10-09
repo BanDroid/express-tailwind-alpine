@@ -9,4 +9,9 @@
 
 	<!-- your css and js, note that locals.BASE_ROUTE is need if your app running on specific path of your virtual host -->
 	<link rel="stylesheet" href=<%= locals.BASE_ROUTE + "/css/index.css" %>>
+
+    <script>
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
 </head>
