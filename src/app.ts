@@ -16,13 +16,14 @@ async function start() {
 		(async function () {
 			const { default: livereload } = await import("livereload");
 			const { default: connectLiveReload } = await import("connect-livereload");
-			const liveReloadServer = livereload.createServer();
-			liveReloadServer.server.once("connection", () => {
-				setTimeout(() => {
-					log("refreshing browser...");
-					liveReloadServer.refresh(BASE_ROUTE);
-				}, 100);
+			const liveReloadServer = livereload.createServer({
+				originalPath: env.BASE_ORIGIN || "http://localhost",
+				extraExts: ["ejs"],
 			});
+			liveReloadServer.watch([
+				join(__dirname, "public"),
+				join(__dirname, "views"),
+			]);
 			app.use(connectLiveReload());
 		})();
 	}
