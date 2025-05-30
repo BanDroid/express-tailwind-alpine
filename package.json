@@ -2,11 +2,12 @@
   "name": "express-app",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "src/app.ts",
   "scripts": {
-    "start": "node dist/app.js",
-    "dev": "nodemon --exec \"tsx src/app.ts\" --ext ts,js,json --ignore 'src/*.ejs' & npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --watch",
-    "build": "tsc -p . && npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --minify && cp -r src/public dist &&  cp -r src/views dist && rm dist/public/css/tailwind.css"
+    "start": "deno run -A src/app.ts",
+    "dev": "deno run -A --watch src/app.ts",
+    "dev:tailwind": "deno run -A npm:@tailwindcss/cli -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --watch",
+    "build:tailwind": "deno run -A npm:@tailwindcss/cli -i ./src/public/css/tailwind.css -o ./src/public/css/index.css"
   },
   "keywords": [],
   "author": "",
@@ -15,22 +16,19 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^5.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
     "@types/connect-livereload": "^0.6.1",
     "@types/cors": "^2.8.14",
-    "@types/express": "^4.17.18",
+    "@types/express": "^5.0.2",
     "@types/livereload": "^0.9.3",
-    "@types/node": "^20.7.2",
+    "@types/node": "^22.15.28",
     "autoprefixer": "^10.4.16",
     "connect-livereload": "^0.6.1",
     "livereload": "^0.9.3",
-    "nodemon": "^3.0.1",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.3",
-    "tsx": "^3.13.0",
-    "typescript": "^5.2.2"
+    "tailwindcss": "^4.1.8"
   }
 }

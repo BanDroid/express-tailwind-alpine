@@ -11,7 +11,10 @@ git clone https://github.com/BanDroid/express-tailwind-alpine.git
 ```
 
 3. change the `name` and `author` properties in package.json as you like.
-4. run `npm install`.
-5. run `npm run dev` to start dev mode.
+4. run `deno install --npm`.
+5. run `deno task "dev*"` to start dev mode.
+6. run `deno task build:tailwind; deno task start` to use it in your production server.
 
 this template is already configured with livereload, no need to refresh browser for each change.
+
+> This new changes use Deno, altough, you just need to configure scripts in `package.json` and make sure you are using Node v20.11.0 and above.

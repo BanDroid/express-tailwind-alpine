@@ -1,7 +1,7 @@
 import { config, DotenvParseOutput } from "dotenv";
-import { existsSync } from "fs";
-import { join } from "path";
-import { cwd } from "process";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { cwd } from "node:process";
 
 const envPath = existsSync(join(cwd(), "..", ".env"))
   ? join(cwd(), "..", ".env")
