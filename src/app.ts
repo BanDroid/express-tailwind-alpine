@@ -4,7 +4,7 @@ import express from "express";
 import cors from "cors";
 import env from "./config/env.ts";
 
-import RoutesHanlder from "./routes/handler.ts";
+import RoutesHandler from "./routes/handler.ts";
 
 const BASE_ROUTE = env.BASE_ROUTE || "/";
 
@@ -43,12 +43,12 @@ async function start() {
       res.locals.BASE_ROUTE = BASE_ROUTE === "/" ? "" : BASE_ROUTE;
       next();
     },
-    RoutesHanlder
+    RoutesHandler
   );
   app.use(BASE_ROUTE, express.static(join(import.meta.dirname!, "public")));
 
   app.listen(env.PORT || 3000, () => {
-    log("Server running on port " + (env.PORT || 3000));
+    log("Server running on http://localhost:" + (env.PORT || 3000));
   });
 }
 
