@@ -10,10 +10,10 @@ template project for express application using ejs as view engine and apply tail
 git clone https://github.com/BanDroid/express-tailwind-alpine.git
 ```
 
-3. change the `name` and `author` properties in package.json as you like.
-4. run `deno install --npm`.
-5. run `deno task "dev*"` to start dev mode.
-6. run `deno task build:tailwind; deno task start` to use it in your production server.
+2. change the `name` and `author` properties in package.json as you like.
+3. run `deno install --npm`.
+4. run `deno task "dev*"` to start dev mode.
+5. run `deno task build:tailwind; deno task start` to use it in your production server.
 
 this template is already configured with livereload, no need to refresh browser for each change.
 
