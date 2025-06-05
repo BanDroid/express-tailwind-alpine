@@ -50,7 +50,7 @@
           mkdir $HOME/.local
           mkdir $HOME/.local/bin
         '';
-        download-deno = "curl -fsSL https://deno.land/install.sh | sh -y && deno install --npm --allow-scripts";
+        download-deno = "curl -fsSL https://deno.land/install.sh | sh -s -- -y && deno install --npm --allow-scripts";
       };
       # Runs when the workspace is (re)started
       onStart = {
