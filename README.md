@@ -11,7 +11,7 @@ git clone https://github.com/BanDroid/express-tailwind-alpine.git
 ```
 
 2. change the `name` and `author` properties in package.json as you like.
-3. run `deno install --npm`.
+3. run `deno install --npm --allow-scripts`.
 4. run `deno task "dev*"` to start dev mode.
 5. run `deno task build:tailwind; deno task start` to use it in your production server.
 
